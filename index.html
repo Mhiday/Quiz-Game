@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUIZ GAME</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="head">MHIDAY QUIZ GAME</h1>
+  </header>
+    <!-- APP CONTAINER -->
+    <div id="appContainer">
+      
+
+      <!-- MAIN CONTAINER -->
+      <div id="mainContainer" class="border-10">
+          
+
+        <!-- QUESTION DISPLAY AREA -->
+        <div id="questionArea" class="display-area show">
+          <h2>Question <span id="currQuestionLabel">1<span></h2>
+          <p id="question"><p>
+          <div id="options"></div>
+        </div>
+
+        <!-- QUESTION DISPLAY AREA -->
+        
+        <div id="quizEnd" class="display-area hide">
+          <div class="message">Thank you for taking this quiz. You scored</div>
+          <div class="score"></div>
+        </div>
+    
+
+        <!-- ACTION AREA -->
+        <div id="actionArea" class="border-10 show-flex">
+          <div id="primaryAction">
+            <button id="prevBtn" class="btn btn-pry">Previous</button>
+            <button id="nextBtn" class="btn btn-pry">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO CONTAINER -->
+      <div id="infoContainer" class="border-10">
+        <h2 class="title">Score Board</h2>
+        <table>
+          <tr>
+            <td>Correct</td>
+            <td id="correctScore" class="score">0</td>
+          </tr>
+          <tr>
+            <td>Missed</td>
+            <td id="wrongScore" class="score">0</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td id="total" class="score">0</td>
+          </tr>
+        </table>
+        <button id="submitBtn" class="btn btn-pry">Finish</button>
+        <small>
+          ⚠️<br>
+          Click Finish only when you are done with the quiz!
+        </small>
+      </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

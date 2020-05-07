@@ -1,0 +1,289 @@
+:root {
+    --main-bg: white;
+    --main-bg-accent:white;
+    --btn-pry: #857CE9;
+    --btn-pry-accent: rgb(47, 240, 150);
+    --btn-sec: #C7C3F5;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(./images/erik-mclean-C3T8KTZxTFM-unsplash\ 1.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+  
+  div, button {
+    box-sizing: border-box;
+  }
+  
+  /* app container */
+  
+  #appContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+
+  }
+  
+  .head{
+      color: white;
+      text-align: center;
+    
+  }
+
+  header{
+    margin-top: 50px;
+  }
+  /* main container */
+  #mainContainer {
+    flex-basis: 30%;
+    margin-left: auto;
+    margin-top: 50px;
+  }
+  
+  #mainContainer, #infoContainer {
+    height: 500px;
+  }
+  
+  /* styling for direction children of maincontainer */
+  #mainContainer > div {
+    width: 100%;
+  }
+  
+  /* 
+  --------------------------------------
+  
+  display area
+  
+  --------------------------------------
+   */
+  .display-area {
+    height: 400px;
+    background: var(--main-bg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 2rem;
+    /* background-color:  rgb(240, 222, 143); */
+  }
+  
+  #question {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .options {
+    list-style: none;
+  }
+  
+  .options li {
+    display: block;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 0 5px;
+  }
+  
+  .options li span {
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .options li input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  input[class="correct"] + span {
+    background: limegreen;
+    color: white;
+  }
+  
+  input[class="wrong"] + span {
+    background: #f94035;
+    color: white;
+  }
+  
+  
+  /* 
+  --------------------------------------
+  
+  action area
+  
+  --------------------------------------
+   */
+  
+  #actionArea {
+    height: 100px;
+    background: var(--main-bg-accent);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 32px;
+  }
+  
+  #primaryAction {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #secondaryAction {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  #prevBtn, #nextBtn, #restartBtn {
+    min-width: 100px;
+  }
+  
+  #submitBtn {
+    margin-top: 32px;
+    width: 100%;
+    text-transform: capitalize;
+  }
+  
+  small {
+    font-size: 14px;
+    color: #857CE9;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* 
+  --------------------------------------
+  
+  score board
+  
+  --------------------------------------
+   */
+  
+  #infoContainer {
+    flex-basis: 20%;
+    background: var(--main-bg);
+    padding: 32px;
+    margin-top: 50px;
+    margin-right: auto;
+  }
+  
+  #infoContainer .title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(255, 236, 149);
+  }
+  
+  th, td {
+    border-bottom: 1px solid  rgb(240, 222, 143);
+    height: 40px;
+    padding: 0 10px;
+  }
+  
+  td.score {
+    text-align: center;
+  }
+  
+  
+  #quizEnd {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #quizEnd div {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  #quizEnd .message {
+    font-size: 20px;
+  }
+  
+  #quizEnd .score {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  
+  
+  /* 
+  --------------------------------------
+  
+  utility classes
+  
+  --------------------------------------
+   */
+  .btn {
+    border-radius: 5px;
+    height: 40px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 0 5px;
+  }
+  
+  .btn-pry {
+    background: var(--btn-pry);
+    color: white;
+  }
+  
+  .btn-sec {
+    background: transparent;
+    border: 2px solid var(--btn-sec);
+    color: #5C50E2;
+  }
+  
+  .btn-sec:hover {
+    background: #DEDCF9;
+  }
+  
+  .btn-pry:hover {
+    background: var(--btn-pry-accent);
+  }
+  
+  .border-10 {
+    border-radius: 10px;
+  }
+  
+  .correct {
+    background: limegreen;
+    color: white;
+  }
+  
+  .wrong {
+    background: #f94035;
+    color: white;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  
+  .show-flex {
+    display: flex;
+  }
